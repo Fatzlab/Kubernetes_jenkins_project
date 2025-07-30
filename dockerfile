@@ -8,15 +8,15 @@ RUN yum install -y httpd \
     zip \
     unzip
 
-ADD https://www.free-css.com/assets/files/free-css-templates/download/page254/photogenic.zip /var/www/html/
+ADD https://www.dropbox.com/scl/fi/79s8t91encamiy3ytfl1a/pictures.zip /var/www/html/
 
 WORKDIR /var/www/html/
 
-RUN unzip photogenic.zip
+RUN unzip pictures.zip
 
-RUN cp -rf photogenic/* .
+RUN cp -rf pictures/* .
 
-RUN rm -rf photogenic photogenic.zip
+RUN rm -rf pictures pictures.zip
 
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
 
