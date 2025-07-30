@@ -4,9 +4,7 @@ FROM centos:7
 LABEL maintainer="fz.fatimazohraa@gmail.com"
 
 # Install Apache HTTP server
-RUN yum -y update && \
-    yum install -y httpd && \
-    yum clean all
+RUN yum install -y httpd
 
 # Add image to Apache root
 ADD https://cdn-employer-wp.arc.dev/wp-content/uploads/2022/04/good-software-developer-1128x635.jpg /var/www/html/
